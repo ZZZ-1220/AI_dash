@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SNS 시대의 일코 굿즈 마케팅 데이터 대시보드">
+  <meta name="theme-color" content="#f7f3ec">
+  <title>ILCO GOODS DATA LAB</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content">본문 바로가기</a>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="주 메뉴">
+      <div class="brand-block">
+        <div class="brand-mark" aria-hidden="true"><span>IG</span><i>✦</i></div>
+        <div>
+          <p class="eyebrow">FANDOM ARCHIVE</p>
+          <strong>ILCO GOODS<br>DATA LAB</strong>
+        </div>
+      </div>
+
+      <nav class="main-nav" aria-label="대시보드 메뉴">
+        <button class="nav-item is-active" data-view="overview" aria-current="page">
+          <span class="nav-index">01</span><span>Overview</span>
+        </button>
+        <button class="nav-item" data-view="market">
+          <span class="nav-index">02</span><span>Market &amp; Cases</span>
+        </button>
+        <button class="nav-item" data-view="price">
+          <span class="nav-index">03</span><span>Price Intelligence</span>
+        </button>
+        <button class="nav-item" data-view="pilot">
+          <span class="nav-index">04</span><span>Pilot &amp; KPI</span>
+        </button>
+        <button class="nav-item" data-view="explorer">
+          <span class="nav-index">05</span><span>Data Explorer</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        <div><b>VERIFIED DATA</b><small>93 records · 27 fields</small></div>
+      </div>
+
+      <div class="sidebar-footer">
+        <span>ANALYSIS DATE</span>
+        <b>2026. 07. 15</b>
+      </div>
+    </aside>
+
+    <div class="workspace">
+      <header class="topbar">
+        <button class="mobile-menu" id="mobileMenu" aria-label="메뉴 열기" aria-expanded="false">☰</button>
+        <div class="search-wrap">
+          <label class="sr-only" for="globalSearch">전체 데이터 검색</label>
+          <span aria-hidden="true">⌕</span>
+          <input id="globalSearch" type="search" placeholder="지표, 사례, 카테고리 검색" autocomplete="off">
+          <kbd>⌘ K</kbd>
+        </div>
+        <div class="top-actions">
+          <button class="button button-soft" id="openFilters" aria-haspopup="dialog">
+            <span aria-hidden="true">⌁</span> 필터 <span class="filter-count" id="filterCount">0</span>
+          </button>
+          <button class="button button-dark" id="downloadCsv">
+            <span aria-hidden="true">↓</span> CSV
+          </button>
+        </div>
+      </header>
+
+      <div class="active-filters" id="activeFilters" aria-live="polite"></div>
+
+      <main id="main-content" tabindex="-1">
+        <section class="view is-active" id="view-overview" data-view-panel="overview">
+          <div class="page-heading">
+            <div>
+              <p class="kicker"><span>01</span> MARKET OVERVIEW</p>
+              <h1>SNS 시대의<br><em>일코 굿즈</em> 데이터 랩</h1>
+              <p class="lede">팬만 해독할 수 있는 코드를 일상적인 사용 장면으로 번역하는 생활형 미디어의 현재를 읽습니다.</p>
+            </div>
+            <div class="hero-sticker" aria-label="핵심 전략">
+              <span>MAIN STRATEGY</span>
+              <strong>HYBRID<br>CODE</strong>
+              <i>★</i>
+            </div>
+          </div>
+
+          <div class="notice-bar">
+            <span class="notice-icon" aria-hidden="true">i</span>
+            <p><b>읽는 법</b> 전망·근사·하한 표현을 원문 그대로 유지하며, 단일 출처 수치는 주의 배지로 구분합니다.</p>
+            <button class="text-link" data-go-view="explorer">검증 데이터 보기 →</button>
+          </div>
+
+          <div class="metric-grid" id="metricGrid"></div>
+
+          <div class="dashboard-grid two-one">
+            <article class="panel evolution-panel">
+              <div class="panel-heading">
+                <div>
+                  <p class="mini-label">MARKET EVOLUTION</p>
+                  <h2>소장에서 일상 사용으로</h2>
+                </div>
+                <span class="sticker sticker-yellow">3 STAGES</span>
+              </div>
+              <div class="evolution-track">
+                <div class="evolution-line" aria-hidden="true"></div>
+                <button class="evolution-step" data-record="Q004">
+                  <span>01</span><strong>노출형 굿즈</strong><p>초상·그룹색·대형 로고</p><small>집단 소속감 과시</small>
+                </button>
+                <button class="evolution-step is-current" data-record="Q005">
+                  <span>02</span><strong>생활형 굿즈</strong><p>폰케이스·에코백·의류</p><small>실용성·품질 강화</small>
+                </button>
+                <button class="evolution-step" data-record="Q011">
+                  <span>03</span><strong>라이프스타일 IP</strong><p>패션·리빙·F&amp;B</p><small>연중 반복 매출</small>
+                </button>
+              </div>
+            </article>
+
+            <article class="panel signal-panel">
+              <div class="panel-heading">
+                <div><p class="mini-label">SIGNAL WATCH</p><h2>관심도 급등 신호</h2></div>
+                <span class="warning-badge">⚠ 단일 출처</span>
+              </div>
+              <div class="signal-number">1,643,000<small>%</small></div>
+              <p>영화·게임 IP 굿즈 검색량·관심도 증가</p>
+              <div class="signal-warning">비교 기준 정의가 불명확해 원출처 통계 정의 확인이 필요합니다.</div>
+              <button class="text-link" data-record="Q013">근거 확인 →</button>
+            </article>
+          </div>
+
+          <article class="panel">
+            <div class="panel-heading">
+              <div><p class="mini-label">CONSUMER INSIGHTS</p><h2>구매를 만드는 다섯 가지 마음</h2></div>
+              <span class="sticker sticker-mint">20–30s</span>
+            </div>
+            <div class="insight-grid" id="insightGrid"></div>
+          </article>
+
+          <article class="panel journey-panel">
+            <div class="panel-heading">
+              <div><p class="mini-label">SOCIAL JOURNEY</p><h2>발견이 확산으로 다시 이어지는 6단계</h2></div>
+              <button class="text-link" data-go-view="pilot">KPI 연결 보기 →</button>
+            </div>
+            <div class="journey-flow" id="journeyFlow"></div>
+          </article>
+        </section>
+
+        <section class="view" id="view-market" data-view-panel="market" hidden>
+          <div class="section-heading">
+            <div><p class="kicker"><span>02</span> MARKET &amp; CASES</p><h1>일상적 디자인 언어로<br>번역된 <em>IP 사례</em></h1></div>
+            <p>사례 카드를 선택하면 실행 방식, 시사점, 출처와 검증 주의를 함께 확인할 수 있습니다.</p>
+          </div>
+
+          <div class="case-summary" id="caseSummary"></div>
+
+          <div class="dashboard-grid two-one">
+            <article class="panel">
+              <div class="panel-heading">
+                <div><p class="mini-label">GLOBAL POP-UP</p><h2>HYBE 오프라인 확장</h2></div>
+                <span class="sticker sticker-pink">SINCE 2019</span>
+              </div>
+              <div class="bar-chart" id="popupChart" role="img" aria-label="HYBE 팝업 국가, 도시, 매장 수 비교"></div>
+              <div class="visitor-callout">
+                <div><span>누적 방문객</span><strong>174만 명</strong></div>
+                <div><span>2025 상반기</span><strong>63만 명</strong></div>
+              </div>
+              <p class="chart-note">서로 다른 단위는 별도 카드로 분리했으며, 막대는 국가·도시·팝업 개수만 비교합니다.</p>
+            </article>
+
+            <article class="panel case-list-panel">
+              <div class="panel-heading">
+                <div><p class="mini-label">CASE INDEX</p><h2>주요 사례</h2></div>
+                <span class="sticker sticker-yellow">6 CASES</span>
+              </div>
+              <div class="case-list" id="caseList"></div>
+            </article>
+          </div>
+
+          <article class="panel">
+            <div class="panel-heading">
+              <div><p class="mini-label">STRATEGY COMPARISON</p><h2>세 가지 디자인 대안</h2></div>
+              <span class="recommend-badge">★ 권고안: 하이브리드 코드형</span>
+            </div>
+            <div class="strategy-table-wrap">
+              <table class="strategy-table">
+                <thead><tr><th>구분</th><th>노출형</th><th>완전 은닉형</th><th class="recommended">하이브리드 코드형</th></tr></thead>
+                <tbody>
+                  <tr><th>팬 식별성</th><td>매우 높음</td><td>낮음</td><td class="recommended">높음</td></tr>
+                  <tr><th>대중성</th><td>낮음</td><td>매우 높음</td><td class="recommended">높음</td></tr>
+                  <tr><th>SNS 적합성</th><td>공연 인증</td><td>미감 중심</td><td class="recommended">해독·사용·참여</td></tr>
+                  <tr><th>권고 활용</th><td>공연·한정판</td><td>비팬 협업</td><td class="recommended">주력 데일리 라인</td></tr>
+                  <tr><th>한계</th><td>일상 사용 부담</td><td>팬덤 연결 약화</td><td class="recommended">코드 설계·검증 필요</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="chart-note">보고서의 정성 평가를 그대로 사용했으며 임의의 점수는 생성하지 않았습니다.</p>
+          </article>
+        </section>
+
+        <section class="view" id="view-price" data-view-panel="price" hidden>
+          <div class="section-heading">
+            <div><p class="kicker"><span>03</span> PRICE INTELLIGENCE</p><h1>성격이 다른 가격은<br><em>따로 비교</em>합니다</h1></div>
+            <p>판매가, 제작 단가, 2차 거래 호가를 분리해 평균·중앙값·범위를 확인합니다.</p>
+          </div>
+
+          <div class="price-legend">
+            <span><i class="legend-range"></i> 가격 범위</span>
+            <span><i class="legend-average"></i> 평균</span>
+            <span><i class="legend-median"></i> 중앙값</span>
+          </div>
+          <article class="panel price-chart-panel">
+            <div class="price-scale" aria-hidden="true"><span>0원</span><span>5만</span><span>10만</span><span>15만</span><span>20만 원</span></div>
+            <div id="priceChart" class="range-chart" role="img" aria-label="네 가지 동질 가격군의 평균, 중앙값, 최소값, 최대값 비교"></div>
+          </article>
+
+          <div class="price-cards" id="priceCards"></div>
+
+          <div class="warning-grid">
+            <article class="data-warning">
+              <span>⚠</span><div><b>C2C 데이터 주의</b><p>실제 거래 완료 가격이 아닌 게시 호가이며 상품 상태와 시점이 통제되지 않았습니다.</p></div>
+            </article>
+            <article class="data-warning is-neutral">
+              <span>≠</span><div><b>통합 평균 금지</b><p>성격이 다른 네 가격군을 하나의 시장 평균으로 합산하지 않습니다.</p></div>
+            </article>
+          </div>
+
+          <article class="panel">
+            <div class="panel-heading">
+              <div><p class="mini-label">PRICE RECORDS</p><h2>가격 데이터 빠른 보기</h2></div>
+              <button class="button button-soft" data-price-explorer>전체 가격 데이터</button>
+            </div>
+            <div class="mini-table-wrap"><table class="mini-table" id="priceTable"></table></div>
+          </article>
+        </section>
+
+        <section class="view" id="view-pilot" data-view-panel="pilot" hidden>
+          <div class="section-heading">
+            <div><p class="kicker"><span>04</span> PILOT &amp; KPI</p><h1>12주 동안 검증하고<br><em>근거로 증산</em>합니다</h1></div>
+            <p>2·5·8·12주 의사결정 게이트에서 계속·수정·중단을 기록하는 운영 구조입니다.</p>
+          </div>
+
+          <article class="panel pilot-panel">
+            <div class="panel-heading">
+              <div><p class="mini-label">12-WEEK ROADMAP</p><h2>파일럿 타임라인</h2></div>
+              <span class="sticker sticker-blue">G2 · G5 · G8 · G12</span>
+            </div>
+            <div class="weeks-row" aria-hidden="true" id="weeksRow"></div>
+            <div class="pilot-track" id="pilotTrack"></div>
+            <div class="gate-status" id="gateStatus"></div>
+          </article>
+
+          <div class="kpi-grid" id="kpiGrid"></div>
+
+          <article class="decision-panel">
+            <div class="decision-icon" aria-hidden="true">!</div>
+            <div>
+              <p class="mini-label">DECISION PRINCIPLE</p>
+              <h2>조회 수만 높다면, 증산하지 않습니다.</h2>
+              <p>저장·상세조회·구매전환이 낮으면 화제형 콘텐츠로만 분류하고, 사용형 UGC와 재구매 의향을 함께 확인합니다.</p>
+            </div>
+            <button class="button button-dark" data-go-view="explorer">판정 근거 보기</button>
+          </article>
+        </section>
+
+        <section class="view" id="view-explorer" data-view-panel="explorer" hidden>
+          <div class="section-heading explorer-heading">
+            <div><p class="kicker"><span>05</span> DATA EXPLORER</p><h1>93개의 근거를<br><em>직접 확인</em>하세요</h1></div>
+            <div class="record-counter"><span>FILTERED</span><strong id="recordCount">93</strong><small>/ 93 RECORDS</small></div>
+          </div>
+
+          <article class="panel explorer-panel">
+            <div class="explorer-toolbar">
+              <div class="table-search">
+                <span aria-hidden="true">⌕</span>
+                <input id="tableSearch" type="search" placeholder="현재 테이블에서 검색">
+              </div>
+              <select id="categoryFilter" aria-label="대분류 필터"><option value="">모든 대분류</option></select>
+              <select id="statusFilter" aria-label="교차문서 상태 필터"><option value="">모든 검증 상태</option></select>
+              <button class="button button-soft" id="columnToggle" aria-haspopup="dialog">열 설정</button>
+              <button class="button button-soft" id="clearAll">초기화</button>
+            </div>
+
+            <div class="table-meta">
+              <p>행을 선택하면 출처·산출식·검수 조치를 확인할 수 있습니다.</p>
+              <div class="status-legend">
+                <span><i class="dot verified"></i> 교차 확인</span>
+                <span><i class="dot single"></i> 단일 출처</span>
+                <span><i class="dot caution"></i> 주의 필요</span>
+              </div>
+            </div>
+
+            <div class="data-table-wrap">
+              <table class="data-table" id="dataTable">
+                <thead id="dataTableHead"></thead>
+                <tbody id="dataTableBody"></tbody>
+              </table>
+              <div class="empty-state" id="emptyState" hidden>
+                <span>⌕</span><h3>일치하는 데이터가 없습니다</h3><p>검색어나 필터 조건을 변경해 보세요.</p>
+              </div>
+            </div>
+
+            <div class="pagination">
+              <button id="prevPage" aria-label="이전 페이지">←</button>
+              <div id="pageNumbers"></div>
+              <button id="nextPage" aria-label="다음 페이지">→</button>
+            </div>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>ILCO GOODS DATA LAB · Source grounded dashboard</p>
+        <p>수치·사례는 2026.07.15 기준 자료이며 외부 집행 전 최신성과 권리 상태를 재확인하세요.</p>
+      </footer>
+    </div>
+  </div>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="drawer" id="detailDrawer" aria-hidden="true" aria-labelledby="drawerTitle">
+    <div class="drawer-header">
+      <div><p class="mini-label" id="drawerLabel">RECORD DETAIL</p><h2 id="drawerTitle">데이터 상세</h2></div>
+      <button class="icon-button" data-close-drawer aria-label="상세 패널 닫기">×</button>
+    </div>
+    <div class="drawer-content" id="drawerContent"></div>
+  </aside>
+
+  <dialog class="filter-dialog" id="filterDialog">
+    <form method="dialog">
+      <div class="dialog-heading">
+        <div><p class="mini-label">GLOBAL FILTER</p><h2>데이터 필터</h2></div>
+        <button class="icon-button" value="cancel" aria-label="필터 닫기">×</button>
+      </div>
+      <div class="filter-fields" id="filterFields"></div>
+      <div class="dialog-actions">
+        <button type="button" class="button button-soft" id="resetDialogFilters">모두 초기화</button>
+        <button value="apply" class="button button-dark" id="applyDialogFilters">필터 적용</button>
+      </div>
+    </form>
+  </dialog>
+
+  <dialog class="column-dialog" id="columnDialog">
+    <form method="dialog">
+      <div class="dialog-heading">
+        <div><p class="mini-label">TABLE COLUMNS</p><h2>표시할 열 선택</h2></div>
+        <button class="icon-button" value="cancel" aria-label="열 설정 닫기">×</button>
+      </div>
+      <div class="column-options" id="columnOptions"></div>
+      <div class="dialog-actions">
+        <button type="button" class="button button-soft" id="resetColumns">기본값</button>
+        <button value="apply" class="button button-dark">적용</button>
+      </div>
+    </form>
+  </dialog>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
+
