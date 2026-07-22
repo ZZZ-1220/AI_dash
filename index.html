@@ -96,8 +96,7 @@
 
           <div class="metric-grid" id="metricGrid"></div>
 
-          <div class="dashboard-grid two-one">
-            <article class="panel evolution-panel">
+          <article class="panel evolution-panel">
               <div class="panel-heading">
                 <div>
                   <p class="mini-label">MARKET EVOLUTION</p>
@@ -117,19 +116,37 @@
                   <span>03</span><strong>라이프스타일 IP</strong><p>패션·리빙·F&amp;B</p><small>연중 반복 매출</small>
                 </button>
               </div>
-            </article>
+          </article>
 
-            <article class="panel signal-panel">
-              <div class="panel-heading">
-                <div><p class="mini-label">SIGNAL WATCH</p><h2>관심도 급등 신호</h2></div>
+          <article class="panel signal-panel" aria-labelledby="signalTitle">
+            <span class="signal-decor signal-decor-ring signal-decor-ring-left" aria-hidden="true"></span>
+            <span class="signal-decor signal-decor-ring signal-decor-ring-right" aria-hidden="true"></span>
+            <span class="signal-decor signal-decor-burst" aria-hidden="true"></span>
+            <span class="signal-decor signal-decor-spark signal-decor-spark-one" aria-hidden="true">✦</span>
+            <span class="signal-decor signal-decor-spark signal-decor-spark-two" aria-hidden="true">✦</span>
+
+            <div class="signal-heading">
+              <div>
+                <p class="mini-label">SIGNAL WATCH</p>
+                <h2 id="signalTitle">관심도 급등 신호</h2>
+              </div>
+              <div class="signal-heading-line" aria-hidden="true"></div>
+              <div class="signal-badge-row">
                 <span class="warning-badge">⚠ 단일 출처</span>
               </div>
-              <div class="signal-number">1,643,000<small>%</small></div>
-              <p>영화·게임 IP 굿즈 검색량·관심도 증가</p>
-              <div class="signal-warning">비교 기준 정의가 불명확해 원출처 통계 정의 확인이 필요합니다.</div>
-              <button class="text-link" data-record="Q013">근거 확인 →</button>
-            </article>
-          </div>
+            </div>
+
+            <div class="signal-card-stack">
+              <div class="signal-number-card">
+                <div class="signal-number">1,643,000<small>%</small></div>
+                <p>영화·게임 IP 굿즈 검색량·관심도 증가</p>
+              </div>
+              <div class="signal-detail-card">
+                <div class="signal-warning">비교 기준 정의가 불명확해 원출처 통계 정의 확인이 필요합니다.</div>
+                <button class="text-link" type="button" data-record="Q013">근거 확인 →</button>
+              </div>
+            </div>
+          </article>
 
           <article class="panel">
             <div class="panel-heading">
@@ -362,4 +379,3 @@
   <script src="app.js"></script>
 </body>
 </html>
-
